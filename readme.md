@@ -1,4 +1,4 @@
-json_kvs is dependency free library for key/value storage, based on json file
+json_kvs is dependency free library for key/value storage, based on json file\n
 json_kvs can receive optional 'scope' parameter, what allows to use same file in multiple scripts simultaneously  
 
 ## Installation
