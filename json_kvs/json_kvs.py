@@ -15,8 +15,7 @@ class KVS:
             return data
         except Exception as e:
             print("Can't read KVS file")
-            print(e)
-            exit()
+            raise
 
     def __upload_kvs_content(self, path):
         if os.path.exists(path):
@@ -31,8 +30,7 @@ class KVS:
                 self.kvsData = self.basicJson
             except Exception as e:
                 print("Can't create KVS file")
-                print(e)
-                exit()
+                raise
 
 
     def __write_down_kvs_content(self, path):
@@ -42,7 +40,7 @@ class KVS:
             json.dump(self.kvsData, fileObj)
             fileObj.close()
         except Exception as e:
-            print(e)
+            raise
 
 
     def __verify_scope_and_cereate_if_not_exists(self):
